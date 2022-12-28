@@ -1,20 +1,21 @@
-import React, { useState } from "react";
-import InputEmoji from "react-input-emoji";
-
+import React, { useEffect } from "react";
+import { EncryptStorage } from 'encrypt-storage';
 const Test = () => {
-  const [text, setText] = useState("");
 
-  function handleOnEnter(text) {
-    console.log("enter", text);
-  }
+  const encryptStorage = new EncryptStorage('secret-key-value');
+  const Toastify = () => {
+    encryptStorage.setItem("hello","hello")
+  };
+  
+  useEffect(()=>{
+    console.log(localStorage.getItem("hello"))
+  })
+
   return (
-    <InputEmoji
-      value={text}
-      onChange={setText}
-      cleanOnEnter
-      onEnter={handleOnEnter}
-      placeholder="Type a message"
-    />
+    <>
+      <p onClick={Toastify}>Test</p>
+      
+    </>
   );
 };
 

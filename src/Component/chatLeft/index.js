@@ -1,11 +1,7 @@
 import React from "react";
-import { user1, user2 } from "../../Images/images";
-import $ from "jquery";
+import { user1 } from "../../Images/images";
 
 const ChatLeft = ({ title }) => {
- 
- 
-
   return (
     <div
       className="tab-pane fade show active"
@@ -28,7 +24,6 @@ const ChatLeft = ({ title }) => {
                   <div className="group">
                     <input
                       type="text"
-                      name
                       className="form-control"
                       placeholder="Search..."
                     />
@@ -39,15 +34,15 @@ const ChatLeft = ({ title }) => {
                 <ul>
                   <li
                     className="active"
-                    id="leftChat"
-                    onClick={
-                        () => {
-                        $("#gtf_inner").addClass("chat_live");
-                        $(".user_chatlist_blog")
-                          .parent("li:first-child")
-                          .addClass("active");
-                      }
-                    }
+                    // id="leftChat"
+                    // onClick={
+                    //     () => {
+                    //     $("#gtf_inner").addClass("chat_live");
+                    //     $(".user_chatlist_blog")
+                    //       .parent("li:first-child")
+                    //       .addClass("active");
+                    //   }
+                    // }
                   >
                     <div
                       className="user_chatlist_blog"
@@ -67,8 +62,8 @@ const ChatLeft = ({ title }) => {
                       </div>
                     </div>
                   </li>
-                    
-                  <li id="leftChat"
+
+                  {/* <li id="leftChat"
                     onClick={
                         () => {
                         $("#gtf_inner").addClass("chat_live");
@@ -92,7 +87,7 @@ const ChatLeft = ({ title }) => {
                         <div className="massage-time">10:25 Am</div>
                       </div>
                     </div>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>

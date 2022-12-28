@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import InputEmoji from "react-input-emoji";
 import {
@@ -34,32 +34,19 @@ import {
   pinImg,
   user2,
 } from "../../Images/images";
+import { socket } from "../../store/SocketIo";
 const ChatContent = () => {
   const [text, setText] = useState("");
-
+// console.log("socket",socket)
   function handleOnEnter(text) {
-    console.log("enter", text);
+    // console.log("enter", text);
   }
-  const download = (e) => {
-    console.log(e.target);
-    fetch(e.target, {
-      method: "GET",
-      headers: {},
-    })
-      .then((response) => {
-        response.arrayBuffer().then(function (buffer) {
-          const url = window.URL.createObjectURL(new Blob([buffer]));
-          const link = document.createElement("a");
-          link.href = url;
-          link.setAttribute("download", "image.png"); //or any other extension
-          document.body.appendChild(link);
-          link.click();
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+
+  // useEffect(()=>{
+  //   socket.on("getLatestMessage",(newMessage)=>{
+  //     console.log("newmessage",newMessage)
+  //   })
+  // },[])
 
   return (
     <>
@@ -108,7 +95,6 @@ const ChatContent = () => {
                           <div className="check-noification-box">
                             <input
                               type="checkbox"
-                              name
                               className="checknotification"
                               id="not1"
                             />
@@ -120,7 +106,6 @@ const ChatContent = () => {
                           <div className="check-noification-box">
                             <input
                               type="checkbox"
-                              name
                               className="checknotification"
                               id="not2"
                             />
@@ -132,7 +117,6 @@ const ChatContent = () => {
                           <div className="check-noification-box">
                             <input
                               type="checkbox"
-                              name
                               className="checknotification"
                               id="not3"
                             />
@@ -144,7 +128,6 @@ const ChatContent = () => {
                           <div className="check-noification-box">
                             <input
                               type="checkbox"
-                              name
                               className="checknotification"
                               id="not4"
                             />
@@ -156,7 +139,6 @@ const ChatContent = () => {
                           <div className="check-noification-box">
                             <input
                               type="checkbox"
-                              name
                               className="checknotification"
                               id="not5"
                             />
@@ -168,7 +150,6 @@ const ChatContent = () => {
                           <div className="check-noification-box">
                             <input
                               type="checkbox"
-                              name
                               className="checknotification"
                               id="not5-6"
                             />
@@ -3418,7 +3399,6 @@ const ChatContent = () => {
                             <div className="upload-input">
                               <input
                                 type="text"
-                                name
                                 className="form-control"
                                 placeholder="Channel Name*"
                               />
@@ -3467,7 +3447,6 @@ const ChatContent = () => {
                               <div className="setting-check-label">
                                 <input
                                   type="checkbox"
-                                  name
                                   className="check-toggle-setting"
                                   id="channelcheck"
                                 />
@@ -3505,7 +3484,6 @@ const ChatContent = () => {
                               <div className="setting-check-label">
                                 <input
                                   type="checkbox"
-                                  name
                                   className="check-toggle-setting"
                                   id="discussioncheck"
                                 />
@@ -3546,7 +3524,6 @@ const ChatContent = () => {
                               <div className="setting-check-label">
                                 <input
                                   type="checkbox"
-                                  name
                                   className="check-toggle-setting"
                                   id="signcheck"
                                 />
@@ -3613,7 +3590,6 @@ const ChatContent = () => {
                               <div className="setting-check-label">
                                 <input
                                   type="checkbox"
-                                  name
                                   className="check-toggle-setting"
                                   id="manipulatecheck"
                                 />
@@ -3712,7 +3688,6 @@ const ChatContent = () => {
                         <div className="flex-inline">
                           <input
                             type="text"
-                            name
                             className="form-control"
                             placeholder="Enter Comment"
                           />
@@ -3775,7 +3750,6 @@ const ChatContent = () => {
                   <div className="search-group">
                     <input
                       type="text"
-                      name
                       placeholder="Search Mentor"
                       className="form-control"
                     />
@@ -3928,9 +3902,7 @@ const ChatContent = () => {
                 className="btn-close-c download-btn"
                 // data-bs-dismiss="modal"
                 // aria-label="Close"
-                value="download"
-                // download
-                onClick={(e) => download(e)}
+             
               >
                 <img src={downloading} alt="img" />
               </button>
