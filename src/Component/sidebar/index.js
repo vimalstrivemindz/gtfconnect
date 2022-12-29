@@ -6,7 +6,6 @@ const Sidebar = () => {
   const navigate = useNavigate();
 
   const token = localStorage.getItem("token");
-  console.log("hello", token);
   const UserLogOut = async () => {
     const formData = new FormData();
     formData.append("IsLogging", true);
