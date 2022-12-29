@@ -2,38 +2,60 @@ import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { baseUrlMain } from "../../store/axios";
+import { confirmAlert } from 'react-confirm-alert'; 
+import 'react-confirm-alert/src/react-confirm-alert.css';
 const Sidebar = () => {
   const navigate = useNavigate();
 
   const token = localStorage.getItem("token");
   const UserLogOut = async () => {
-    const formData = new FormData();
-    formData.append("IsLogging", true);
-    formData.append("logout", 0);
-    formData.append("is_gtf_connect", 1);
-    try {
-      baseUrlMain
-        .post("logout", formData, {
-          headers:{
-            Accept: "application/json",
-            DeviceToken: "test_token",
-            DeviceType: "Ios",
-            Authorization: `Bearer ${token}`,
+
+    confirmAlert({
+      title: 'Confirm to LogOut',
+      message: 'Are you sure to do this.',
+      buttons: [
+        {
+          label: 'Yes',
+          onClick: () => {
+
+            const formData = new FormData();
+            formData.append("IsLogging", true);
+            formData.append("logout", 0);
+            formData.append("is_gtf_connect", 1);
+            try {
+              baseUrlMain
+                .post("logout", formData, {
+                  headers:{
+                    Accept: "application/json",
+                    DeviceToken: "test_token",
+                    DeviceType: "Ios",
+                    Authorization: `Bearer ${token}`,
+                  }
+                })
+                .then((res) => {
+                  if (res?.data?.status === 200) {
+                    navigate("/login");
+                    toast.success(res?.data?.message);
+                    localStorage.clear();
+                  } else {
+                    toast.error(res?.data?.message);
+                  }
+                })
+                .catch((error) => console.log(error));
+            } catch (error) {
+              console.log(error);
+            }
+
           }
-        })
-        .then((res) => {
-          if (res?.data?.status === 200) {
-            navigate("/login");
-            toast.success(res?.data?.message);
-            localStorage.clear();
-          } else {
-            toast.error(res?.data?.message);
-          }
-        })
-        .catch((error) => console.log(error));
-    } catch (error) {
-      console.log(error);
-    }
+        },
+        {
+          label: 'No',
+        }
+      ]
+    });
+
+
+  
   };
   return (
     <>

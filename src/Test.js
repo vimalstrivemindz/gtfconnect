@@ -1,19 +1,27 @@
-import React, { useEffect } from "react";
-import { EncryptStorage } from 'encrypt-storage';
+import { confirmAlert } from 'react-confirm-alert'; 
+import 'react-confirm-alert/src/react-confirm-alert.css';
 const Test = () => {
 
-  const encryptStorage = new EncryptStorage('secret-key-value');
-  const Toastify = () => {
-    encryptStorage.setItem("hello","hello")
+ const submit = () => {
+    confirmAlert({
+      title: 'Confirm to LogOut',
+      message: 'Are you sure to do this.',
+      buttons: [
+        {
+          label: 'Yes',
+          onClick: () => alert('Click Yes')
+        },
+        {
+          label: 'No',
+          onClick: () => alert('Click No')
+        }
+      ]
+    });
   };
-  
-  useEffect(()=>{
-    console.log(localStorage.getItem("hello"))
-  })
 
   return (
     <>
-      <p onClick={Toastify}>Test</p>
+             <button onClick={submit}>Confirm dialog</button>
       
     </>
   );

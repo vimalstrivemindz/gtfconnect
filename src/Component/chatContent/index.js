@@ -34,25 +34,87 @@ import {
   pinImg,
   user2,
 } from "../../Images/images";
-import { socket } from "../../store/SocketIo";
+// import { socket } from "../../store/SocketIo";
 const ChatContent = () => {
   const [text, setText] = useState("");
 // console.log("socket",socket)
   function handleOnEnter(text) {
-    // console.log("enter", text);
+    console.log("enter", text);
   }
+  const download = (e) => {
+    console.log(e.target);
+    fetch(e.target, {
+      method: "GET",
+      headers: {},
+    })
+      .then((response) => {
+        response.arrayBuffer().then(function (buffer) {
+          const url = window.URL.createObjectURL(new Blob([buffer]));
+          const link = document.createElement("a");
+          link.href = url;
+          link.setAttribute("download", "image.png"); //or any other extension
+          document.body.appendChild(link);
+          link.click();
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   // useEffect(()=>{
   //   socket.on("getLatestMessage",(newMessage)=>{
   //     console.log("newmessage",newMessage)
   //   })
-  // },[])
+  // })
+
+  
+  const ShowProfile = ()=>{
+    let getSettingId = document.getElementById("gtf_inner")
+    let showProfile = document.getElementById("showProfile");
+    getSettingId.classList.add("width_calc")
+    showProfile.classList.add("open-profile")
+  }
+
+  const CloseProfile = ()=>{
+    let closeSettingId = document.getElementById("gtf_inner")
+    let CloseshowProfile = document.getElementById("showProfile");
+    closeSettingId.classList.remove("width_calc")
+    CloseshowProfile.classList.remove("open-profile")
+  }
+
+  const ShowSetting = ()=>{
+    let closeSettingId = document.getElementById("gtf_inner")
+    let CloseshowProfile = document.getElementById("showProfile");
+    closeSettingId.classList.add("width_calc")
+    CloseshowProfile.classList.add("open-setting")
+  }
+
+  const CloseSetting = ()=>{
+    let closeSettingId = document.getElementById("gtf_inner")
+    let CloseshowProfile = document.getElementById("showProfile");
+    closeSettingId.classList.remove("width_calc")
+    CloseshowProfile.classList.remove("open-setting")
+  }
+  const ShowComment = ()=>{
+    let closeSettingId = document.getElementById("gtf_inner")
+    let CloseshowProfile = document.getElementById("showProfile");
+    closeSettingId.classList.add("width_calc")
+    CloseshowProfile.classList.add("open-comment")
+  }
+
+  const CloseComment = ()=>{
+    let closeSettingId = document.getElementById("gtf_inner")
+    let CloseshowProfile = document.getElementById("showProfile");
+    closeSettingId.classList.remove("width_calc")
+    CloseshowProfile.classList.remove("open-comment")
+  }
 
   return (
     <>
       <div className="chatbox-area">
         <div className="chatbox-right-bar">
-          <div className="chatbox-inner chat_live" id="gtf_inner">
+          <div className="chatbox-inner chat_live " id="gtf_inner">
             <div className="chatbox-header">
               <div
                 className="user-name-bar openright-bar"
@@ -61,7 +123,7 @@ const ChatContent = () => {
                 <figure>
                   <img src={Weblogo} alt="logo" />
                 </figure>
-                <div className="name-content">
+                <div className="name-content" onClick={ShowProfile}>
                   <strong>GTF Options 2.0 Extended</strong>
                   <p>645 Subsribers</p>
                 </div>
@@ -75,7 +137,7 @@ const ChatContent = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="#" className="setting-toggle-open">
+                    <Link to="#" className="setting-toggle-open" onClick={ShowSetting}>
                       <i className="fa-solid fa-gear" />
                     </Link>
                   </li>
@@ -472,7 +534,7 @@ const ChatContent = () => {
                                 </div>
                               </div>
                             </div>
-                            <Link to="#" className="comment-toggle-bar">
+                            <Link to="#" className="comment-toggle-bar"  onClick={ShowComment} >
                               Comment
                             </Link>
                           </div>
@@ -777,7 +839,7 @@ const ChatContent = () => {
                                 </div>
                               </div>
                             </div>
-                            <Link to="#" className="comment-toggle-bar">
+                            <Link to="#" className="comment-toggle-bar" onClick={ShowComment}>
                               Comment
                             </Link>
                           </div>
@@ -1060,7 +1122,7 @@ const ChatContent = () => {
                                 </div>
                               </div>
                             </div>
-                            <Link to="#" className="comment-toggle-bar">
+                            <Link to="#" className="comment-toggle-bar"  onClick={ShowComment}>
                               Comment
                             </Link>
                           </div>
@@ -1353,7 +1415,7 @@ const ChatContent = () => {
                                 </div>
                               </div>
                             </div>
-                            <Link to="#" className="comment-toggle-bar">
+                            <Link to="#" className="comment-toggle-bar"  onClick={ShowComment}>
                               Comment
                             </Link>
                           </div>
@@ -1656,7 +1718,7 @@ const ChatContent = () => {
                                 </div>
                               </div>
                             </div>
-                            <Link to="#" className="comment-toggle-bar">
+                            <Link to="#" className="comment-toggle-bar"  onClick={ShowComment}>
                               Comment
                             </Link>
                           </div>
@@ -1952,7 +2014,7 @@ const ChatContent = () => {
                                 </div>
                               </div>
                             </div>
-                            <Link to="#" className="comment-toggle-bar">
+                            <Link to="#" className="comment-toggle-bar"  onClick={ShowComment}>
                               Comment
                             </Link>
                           </div>
@@ -2235,7 +2297,7 @@ const ChatContent = () => {
                                 </div>
                               </div>
                             </div>
-                            <Link to="#" className="comment-toggle-bar">
+                            <Link to="#" className="comment-toggle-bar"  onClick={ShowComment}>
                               Comment
                             </Link>
                           </div>
@@ -2518,7 +2580,7 @@ const ChatContent = () => {
                                 </div>
                               </div>
                             </div>
-                            <Link to="#" className="comment-toggle-bar">
+                            <Link to="#" className="comment-toggle-bar"  onClick={ShowComment}>
                               Comment
                             </Link>
                           </div>
@@ -2822,7 +2884,7 @@ const ChatContent = () => {
                                 </div>
                               </div>
                             </div>
-                            <Link to="#" className="comment-toggle-bar">
+                            <Link to="#" className="comment-toggle-bar"  onClick={ShowComment}>
                               Comment
                             </Link>
                           </div>
@@ -3112,7 +3174,7 @@ const ChatContent = () => {
                                 </div>
                               </div>
                             </div>
-                            <Link to="#" className="comment-toggle-bar">
+                            <Link to="#" className="comment-toggle-bar"  onClick={ShowComment}>
                               Comment
                             </Link>
                           </div>
@@ -3161,11 +3223,11 @@ const ChatContent = () => {
               </div>
             </div>
           </div>
-          <div className="toggle-side-bar">
+          <div className="toggle-side-bar " id="showProfile">
             <div className="toggle-side-inner">
               <div className="toggle-profile ">
                 <div className="toggle-profile-inner">
-                  <span className="profile-close same-close-bar">
+                  <span className="profile-close same-close-bar" onClick={CloseProfile}>
                     <i className="fa-solid fa-xmark" />
                   </span>
                   <div className="profile-header-toggle">
@@ -3425,7 +3487,7 @@ const ChatContent = () => {
                 <div className="toggle-setting-inner">
                   <div className="setting-header-bar">
                     <h3>Channel Settings</h3>
-                    <span className="toggle-setting-close same-close-bar">
+                    <span className="toggle-setting-close same-close-bar" onClick={CloseSetting}>
                       <i className="fa-solid fa-xmark" />
                     </span>
                   </div>
@@ -3628,7 +3690,7 @@ const ChatContent = () => {
                       </figure>
                       <h2>Brooklyn Simmons</h2>
                       <small>10:22 Am</small>
-                      <span className="toggle-comment-close same-close-bar">
+                      <span className="toggle-comment-close same-close-bar" onClick={CloseComment}>
                         <i className="fa-solid fa-xmark" />
                       </span>
                     </div>
@@ -3902,7 +3964,9 @@ const ChatContent = () => {
                 className="btn-close-c download-btn"
                 // data-bs-dismiss="modal"
                 // aria-label="Close"
-             
+                value="download"
+                // download
+                onClick={(e) => download(e)}
               >
                 <img src={downloading} alt="img" />
               </button>
