@@ -660,10 +660,10 @@ header {
     display: block;
 }
 
-/*.chatbox-inner .chatbox-body {scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
-.chatbox-inner .chatbox-body ::-webkit-scrollbar {width:8px; } 
-.chatbox-inner .chatbox-body ::-webkit-scrollbar-track {background-color:  #F7F7F7; -webkit-border-radius: 0px; border-radius: 0px; }
-.chatbox-inner .chatbox-body ::-webkit-scrollbar-thumb {-webkit-border-radius: 0px; border-radius: 0px; background: #0A4C95; }*/
+/*.chatbox-inner .chatbox-body {scrollbar-width: thin; -webkit-overflow-scrolling: touch;}
+.chatbox-inner .chatbox-body ::-webkit-scrollbar {width:8px;} 
+.chatbox-inner .chatbox-body ::-webkit-scrollbar-track {background-color:  #F7F7F7; -webkit-border-radius: 0px; border-radius: 0px;}
+.chatbox-inner .chatbox-body ::-webkit-scrollbar-thumb {-webkit-border-radius: 0px; border-radius: 0px; background: #0A4C95;}*/
 .chatbox-inner .chatbox-body {
     scrollbar-color: #C3EAD4 #C3EAD4;
     scrollbar-width: thin;
@@ -2155,10 +2155,10 @@ header {
     padding: 10px 5px;
 }
 
-/*.toggle-side-bar.settingopen-bar {right: 0; opacity: 1; visibility: visible; }
+/*.toggle-side-bar.settingopen-bar {right: 0; opacity: 1; visibility: visible;}
 .chatbox-inner.width-calc-setting{width: calc(100% - 340px);}
 .chatbox-inner{width: calc(100% - 340px);}
-.toggle-side-bar {opacity: 1; right: 0; visibility: visible; position: relative; z-index: 999; }*/
+.toggle-side-bar {opacity: 1; right: 0; visibility: visible; position: relative; z-index: 999;}*/
 .chat-area .main-tabcontent .tab-pane {
     height: 100%;
 }
@@ -2794,10 +2794,488 @@ li.messageSent .body_content-chat .comments-bar .commentsright a {
     margin-left: -135px !important;
 }
 
+
+/* login */
+.login {
+    background: #F3F6FF;
+    position: relative;
+}
+
+.login img {
+    max-width: 100%;
+}
+
+.login::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    background: url(../images/top_map.png) 0 0 no-repeat;
+    width: 443px;
+    height: 490px;
+    opacity: 0.15;
+}
+
+.login .loginrow {
+    position: relative;
+    z-index: 10;
+    justify-content: space-between !important;
+    align-items: center !important;
+    min-height: 100vh;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.login .loginleftbox {
+    /* padding: 184px 0 0 0px; */
+    max-width: 100%;
+    width: 844px;
+}
+
+.login .loginleftbox_image {
+    position: relative;
+    margin: 0 0 51px 0;
+    background: url(../images/loginleftbox_image_bg.png) 50% 50% no-repeat;
+    padding: 0 0 0 48px;
+    background-size: contain;
+}
+
+.login .loginleftbox_image .loginleftbox_image_1 img,
+.login .loginleftbox_image .loginleftbox_image_2 img,
+.login .loginleftbox_image .loginleftbox_image_3 img,
+.login .loginleftbox_image .loginleftbox_image_4 img,
+.login .loginleftbox_image .loginleftbox_image_5 img,
+.login .loginleftbox_image .loginleftbox_image_6 img {
+    width: 100%;
+    height: 100%;
+}
+
+.login .loginleftbox_image .loginleftbox_image_1 {
+    width: 262px;
+    height: 539px;
+    margin: 0 auto;
+}
+
+.login .loginleftbox_image .loginleftbox_image_2,
+.login .loginleftbox_image .loginleftbox_image_3,
+.login .loginleftbox_image .loginleftbox_image_4,
+.login .loginleftbox_image .loginleftbox_image_5,
+.login .loginleftbox_image .loginleftbox_image_6 {
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0.1s;
+    animation-iteration-count: infinite;
+    animation-direction: inherit;
+    animation-name: animatione2;
+}
+
+.login .loginleftbox_image .loginleftbox_image_2 {
+    position: absolute;
+    left: 50px;
+    top: 196px;
+    right: 0;
+    bottom: 0;
+    content: "";
+    width: 347px;
+    height: 86px;
+    margin: 0 auto;
+    animation-name: animatione2;
+}
+
+.login .loginleftbox_image .loginleftbox_image_3 {
+    position: absolute;
+    left: 158px;
+    top: 33px;
+    content: "";
+    width: 103px;
+    height: 116px;
+    margin: 0;
+}
+
+.login .loginleftbox_image .loginleftbox_image_4 {
+    position: absolute;
+    top: -4px;
+    right: 92px;
+    content: "";
+    width: 138px;
+    height: 140px;
+    margin: 0;
+}
+
+.login .loginleftbox_image .loginleftbox_image_5 {
+    position: absolute;
+    left: 124px;
+    bottom: 21px;
+    content: "";
+    width: 160px;
+    height: 173px;
+    margin: 0;
+}
+
+.login .loginleftbox_image .loginleftbox_image_6 {
+    position: absolute;
+    right: -33px;
+    bottom: 65px;
+    content: "";
+    width: 120px;
+    height: 129px;
+    margin: 0;
+}
+
+@keyframes animatione1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes animatione2 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.07);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.login .loginleftbox_app {
+    padding-left: 38px;
+}
+
+.login .loginleftbox_app a {
+    margin: 0 4px;
+}
+
+.login .loginrightbox {
+    text-align: center;
+    /* padding: 168px 0 0 0; */
+    width: 440px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 34px;
+}
+
+.login .loginrightbox_logo {
+    padding: 0 0 49px 0;
+}
+
+.login .loginrightbox_logo img {
+    width: 202px;
+}
+
+.login .loginrightbox_form h3 {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 20px;
+    color: #2FB463;
+    margin: 0 0 52px 0;
+}
+
+.login .loginrightbox_form .form-input {
+    position: relative;
+    margin: 0 0 20px 0;
+}
+
+.login .loginrightbox_form .form-control,
+.login .loginrightbox_form .form-select {
+    border-radius: 3.50586px;
+    border: 0;
+    height: 55px;
+    font-family: 'Poppins';
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.25);
+    padding: 15px 51px;
+    box-shadow: none;
+}
+
+.login .loginrightbox_form .form-control {
+    background: #fff;
+}
+
+.login .loginrightbox_form .form-control::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.login .loginrightbox_form .form-control::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.login .loginrightbox_form .form-control:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.login .loginrightbox_form .form-control:-moz-placeholder {
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.login .loginrightbox_form .form-input-icon,
+.login .loginrightbox_form .form-input-eye,
+.login .loginrightbox_form .form-input-flag {
+    position: absolute;
+    left: 13px;
+    top: 13px;
+    content: "";
+    width: 20px;
+    height: 20px;
+}
+
+.login .loginrightbox_form .form-input-eye {
+    left: auto;
+    right: 13px;
+}
+
+.login .loginrightbox_form .form-input-eye img {
+    cursor: pointer;
+}
+
+.login .loginrightbox_form .form-resend {
+    padding: 10px 0 30px 0;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.login .loginrightbox_form .form-resend a {
+    color: #2FB463;
+    text-decoration: underline;
+}
+
+.login .loginrightbox_form .form-resend a:hover {
+    text-decoration: none;
+}
+
+.login .loginrightbox_form .btn-login,
+.login .loginrightbox_form .btn-back {
+    background: #2FB463;
+    border-radius: 3.50586px;
+    height: 55px;
+    width: 100%;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 21px;
+    color: #fff;
+    border: 1px solid #2FB463;
+    padding: 0;
+    line-height: 55px;
+}
+
+.login .loginrightbox_form .btn-back {
+    background: #fff;
+    color: #2FB463;
+    margin-top: 10px;
+}
+
+.login .loginrightbox_or {
+    padding: 37px 0 32px 0;
+}
+
+.login .loginrightbox_or .loginrightbox_ortop {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 0 0 24px 0;
+    position: relative;
+}
+
+.login .loginrightbox_or .loginrightbox_ortop::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    background: rgba(0, 0, 0, 0.1);
+    height: 1px;
+    margin: auto;
+}
+
+.login .loginrightbox_or .loginrightbox_ortop .text {
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+    background: #f3f6ff;
+    padding: 0 20px;
+}
+
+.login .loginrightbox_or ul li {
+    padding: 0 9px;
+}
+
+.login .loginrightbox_or ul li a {
+    width: 57px;
+    height: 57px;
+    background: #fff;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login .btn-nuser {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    color: #2FB463;
+    background: #FFFFFF;
+    border-radius: 3.50586px;
+    height: 55px;
+    width: 100%;
+    display: block;
+    line-height: 55px;
+    padding: 0;
+}
+
+.login .back-to-login {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 16px;
+    color: #2FB463;
+    padding: 30px 0 0 0;
+}
+
+.back-to-login a {
+    color: #2FB463;
+    text-decoration: underline;
+}
+
+.back-to-login a:hover {
+    text-decoration: none;
+}
+
+.login .loginrightbox_form .form-agree {
+    margin: 30px 0 30px 0;
+    text-align: left;
+    font-family: 'Poppins';
+    font-size: 14px;
+    color: #000;
+    padding: 0 0 0 30px;
+    display: flex;
+    align-items: center;
+}
+
+.login .loginrightbox_form .form-agree a {
+    color: #2FB463;
+    text-decoration: underline;
+}
+
+.login .loginrightbox_form .form-agree a:hover {
+    text-decoration: none;
+}
+
+.login .loginrightbox_form .form-agree .form-check-input {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #2FB463;
+    border-radius: 3px;
+    margin: 0 0 0 -30px;
+}
+
+.login .loginrightbox_form .form-agree .form-check-label {
+    padding-left: 10px;
+}
+
+.login .loginrightbox_form .form-input.form-flgselect {
+    display: flex;
+}
+
+.login .loginrightbox_form .form-input.form-flgselect .form-select {
+    width: 200px;
+    padding-right: 0;
+}
+
+/* .login .loginrightbox_form .form-input.form-flgselect .form-control {
+    padding-left: 50px;
+}
+.login .loginrightbox_form .form-input.form-flgselect  .PhoneInputInput {
+    background-color: #fff;
+    border: none;
+    height: 55px;
+}
+.login .loginrightbox_form .form-input.form-flgselect  .PhoneInputInput:focus-visible {
+  outline: none;
+}
+.login .loginrightbox_form .form-input.form-flgselect  .PhoneInput {
+    background-color: #fff;
+    border: none;
+    height: 55px;
+    padding-left: 15px;
+}
+.login .loginrightbox_form .form-input.form-flgselect .form-control .PhoneInputCountry {
+    padding-left: 50px;
+   
+} */
+
+.login .loginrightbox_form .form-input.form-flgselect .react-tel-input .form-control {
+    width: 100%;
+}
+
+.login .loginrightbox_form .form-input.form-flgselect .react-tel-input .country-list .country {
+    display: flex;
+}
+
+.login .loginleft {
+    width: 52.17%;
+}
+
+.login .loginright {
+    width: 42.83%;
+}
+
+@media (min-width:1440px) {
+    .login .container {
+        max-width: 1420px;
+    }
+}
+
+@media (min-width:1600px) {
+    .login .container {
+        max-width: 1580px;
+    }
+}
+
+@media (min-width:1700px) {
+    .login .container {
+        max-width: 1664px;
+    }
+}
+
+@media (max-width:1699px) {
+    .login .loginleft {
+        width: 55%;
+    }
+
+    .login .loginright {
+        width: 42%;
+    }
+}
+
+
+
 @media (max-width:1599px) {
     .user_chatlist {
         max-width: 374px;
-        min-width: 374px;
     }
 
     .user_chatlist_blog .user_chatlist_content p {
@@ -3095,6 +3573,41 @@ li.messageSent .body_content-chat .comments-bar .commentsright a {
     .toggle-side-bar {
         height: calc(100vh - 75px);
     }
+
+    .login .loginleft {
+        width: 61%;
+    }
+
+    .login .loginright {
+        width: 39%;
+    }
+
+    .login .loginrightbox_logo {
+        padding: 0 0 19px 0;
+    }
+
+    .login .loginrightbox_form h3 {
+        margin: 0 0 20px 0;
+    }
+
+    .login .loginleftbox_image .loginleftbox_image_3 {
+        left: 120px;
+        top: 40px;
+    }
+
+    .login .loginleftbox_image .loginleftbox_image_4 {
+        top: 0px;
+        right: 60px;
+    }
+
+    .login .loginleftbox_image .loginleftbox_image_5 {
+        left: 90px;
+    }
+
+    .login .loginleftbox_image .loginleftbox_image_6 {
+        right: -13px;
+        bottom: 100px;
+    }
 }
 
 @media (max-width:1399px) {
@@ -3104,6 +3617,91 @@ li.messageSent .body_content-chat .comments-bar .commentsright a {
 
     .chatbox-inner.width_calc .chatbox-body {
         padding: 135px 73px 80px;
+    }
+
+    .login .loginleftbox_image {
+        padding: 0 0 0 0;
+    }
+
+    .login .loginleftbox_image .loginleftbox_image_2 {
+        left: 0px;
+        top: 206px;
+    }
+
+    .login .loginleftbox_image .loginleftbox_image_3 {
+        left: 100px;
+        top: 80px;
+        width: 90px;
+        height: 101px;
+    }
+
+    .login .loginleftbox_image .loginleftbox_image_4 {
+        top: 50px;
+        right: 60px;
+        width: 110px;
+        height: 112px;
+    }
+
+    .login .loginleftbox_image .loginleftbox_image_5 {
+        left: 60px;
+        width: 120px;
+        height: 130px;
+        bottom: 70px;
+    }
+
+    .login .loginleftbox_image .loginleftbox_image_6 {
+        right: 0px;
+        bottom: 135px;
+        width: 100px;
+        height: 108px;
+    }
+
+    .login .loginrightbox_form .form-input {
+        margin: 0 0 12px 0;
+    }
+
+    .login .loginrightbox_form .form-input-icon,
+    .login .loginrightbox_form .form-input-eye,
+    .login .loginrightbox_form .form-input-flag {
+        top: 8px;
+    }
+
+    .login .loginrightbox_form .form-control,
+    .login .loginrightbox_form .form-select {
+        height: 45px;
+        font-size: 14px;
+        padding: 10px 51px;
+    }
+
+    .login .loginrightbox_form .form-agree {
+        margin: 20px 0;
+    }
+
+    .login .loginrightbox_form .btn-login,
+    .login .loginrightbox_form .btn-back {
+        height: 45px;
+        font-size: 17px;
+        line-height: 45px;
+    }
+
+    .login .back-to-login {
+        font-size: 14px;
+        padding: 20px 0 0 0;
+    }
+
+    .login .btn-nuser {
+        font-size: 14px;
+        height: 45px;
+        line-height: 45px;
+    }
+
+    .login .loginrightbox_or ul li a {
+        width: 47px;
+        height: 47px;
+    }
+
+    .login .loginrightbox {
+        padding-left: 0px;
     }
 }
 
@@ -3118,7 +3716,7 @@ li.messageSent .body_content-chat .comments-bar .commentsright a {
     }
 
     .chatbox-inner.width_calc .chatbox-body {
-        padding: 135px 95px 80px
+        padding: 135px 95px 80px;
     }
 
     .chatbox-inner.width_calc .chatbox-header .chatbox-menubar ul li.dropdown .dropdown-menu {
@@ -3127,5 +3725,76 @@ li.messageSent .body_content-chat .comments-bar .commentsright a {
 
     .chatbox-inner.width_calc .chatbox-header .chatbox-menubar ul li.dropdown.setting-drop .dropdown-menu {
         right: -25px !important;
+    }
+}
+
+@media (max-width:1199px) {
+    .login .loginleftbox_image {
+        padding-left: 50px;
+    }
+
+    .login .loginleftbox_image .loginleftbox_image_1 {
+        width: 200px;
+        height: 411px;
+    }
+
+    .login .loginleftbox_image .loginleftbox_image_2 {
+        width: 242px;
+        height: 60px;
+        top: 156px;
+        left: 44px;
+    }
+
+    .login .loginleftbox_image .loginleftbox_image_3 {
+        left: 90px;
+        top: 50px;
+        width: 70px;
+        height: 79px;
+    }
+
+    .login .loginleftbox_image .loginleftbox_image_4 {
+        top: 50px;
+        right: 60px;
+        width: 70px;
+        height: 71px;
+    }
+
+    .login .loginleftbox_image .loginleftbox_image_5 {
+        left: 50px;
+        width: 80px;
+        height: 87px;
+        bottom: 70px;
+    }
+
+    .login .loginleftbox_image .loginleftbox_image_6 {
+        right: 10px;
+        bottom: 135px;
+        width: 65px;
+        height: 70px;
+    }
+}
+
+@media (max-width:1023px) {
+    .login .loginleft {
+        display: none;
+    }
+
+    .login .loginright {
+        width: 100%;
+    }
+}
+
+@media (max-width:767px) {
+    .login .loginrightbox_logo img {
+        width: 130px;
+    }
+
+    .login .loginrightbox_logo {
+        padding: 0 0 10px 0;
+    }
+
+    .login .loginrightbox_form h3 {
+        margin: 0 0 10px 0;
+        font-size: 16px;
     }
 }
