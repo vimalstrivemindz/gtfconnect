@@ -59,4 +59,20 @@ import fb_icon from "../assets/images/fb-icon.png";
 import google_icon from "../assets/images/google-icon.png";
 import flag_icon from "../assets/images/flag-icon.png";
 import hide_icon from "../assets/images/hide-icon.png";
-export {Weblogo,images5,dataIcon,notifications,channel,downloading,closeGreen,pinImg,closeModel,blockList,deletes,permission,administrator,manipulate,blocklist,reactions,subscribers,sign,discussion,user1,user2,images2,group2,group3,group4,group5,group6,sss,zipIcon,images1,quoteimg,images3,quoteimgGreen,images4,checkUn,loginleftbox_image_1,loginleftbox_image_2,loginleftbox_image_3,loginleftbox_image_4,loginleftbox_image_5,loginleftbox_image_6,app_store,google_play,vector_icon1,vector_icon2,vector_icon3,vector_icon4,vector_icon5,vector_icon6,vector_icon7,vector_icon8,vector_icon9,vector_icon10,vector_icon11,vector_icon12,vector_icon13,vector_icon14,fb_icon,google_icon,flag_icon,hide_icon}
+import accountSetting from "../assets/images/account-setting.png";
+import dateInfoGree from "../assets/images/date-info-gree-icon.png";
+import selectDropIcon from "../assets/images/select-drop-icon.png";
+import userIcon from "../assets/images/user-icon.png";
+import generalIcon from "../assets/images/general-icon.png";
+import additionalInfoIcon from "../assets/images/additional-info-icon.png";
+import messageMailIcon from "../assets/images/message-mail-icon.png";
+import socialInfoIcon from "../assets/images/soical-info-icon.png";
+import billingIcon from "../assets/images/billing-icon.png";
+import dateInfoIcon from "../assets/images/date-info-icon.png";
+import cidyIcon from "../assets/images/cidy-icon.png";
+import countryIcon from "../assets/images/contray-icon.png";
+import gstIcon from "../assets/images/gst-icon.png";
+import codeIcon from "../assets/images/code-icon.png";
+import changePassword from "../assets/images/change-password.png";
+import cityIcon from "../assets/images/city-icon.png";
+export {userIcon,messageMailIcon,cityIcon,codeIcon,changePassword,gstIcon,countryIcon,cidyIcon,dateInfoIcon,socialInfoIcon,generalIcon,billingIcon,additionalInfoIcon,dateInfoGree,selectDropIcon,Weblogo,images5,dataIcon,notifications,channel,downloading,closeGreen,pinImg,closeModel,blockList,deletes,permission,administrator,manipulate,blocklist,reactions,subscribers,sign,discussion,user1,user2,images2,group2,group3,group4,group5,group6,sss,zipIcon,images1,quoteimg,images3,quoteimgGreen,images4,checkUn,loginleftbox_image_1,loginleftbox_image_2,loginleftbox_image_3,loginleftbox_image_4,loginleftbox_image_5,loginleftbox_image_6,app_store,google_play,vector_icon1,vector_icon2,vector_icon3,vector_icon4,vector_icon5,vector_icon6,vector_icon7,vector_icon8,vector_icon9,vector_icon10,vector_icon11,vector_icon12,vector_icon13,vector_icon14,fb_icon,google_icon,flag_icon,hide_icon,accountSetting}

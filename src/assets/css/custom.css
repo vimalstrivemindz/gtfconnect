@@ -2198,6 +2198,37 @@ header {
     flex-wrap: wrap;
 }
 
+.edit_profile_title {padding: 0 !important; }
+.edit-profile-account {height: 100%; position: relative; width: 100%; transition: 0.2s ease; }
+.edit-profile-account .edit-profile-form {height: calc(100vh - 111px); padding: 150px 120px 80px; overflow: auto; position: relative; z-index: 0; scrollbar-color: #C3EAD4 #C3EAD4; scrollbar-width: thin; -webkit-overflow-scrolling: touch; display: flex;align-items: center;justify-content: center;}
+.edit-profile-account .edit-header {padding: 40px 29px; background: #2FB463; top: 0; width: 100%; position: absolute; left: 0; right: 0; }
+.edit-profile-account .edit-header strong {font-weight: 400; font-size: 18px; line-height: 22px; color: #FFFFFF; display: block; }
+.edit-from-inner {max-width: 752px; margin: auto;width: 100%; }
+.account-setting-inner .form-group {margin-bottom: 17px; position: relative;}
+.account-setting-inner .form-group input::placeholder {color: rgba(0, 0, 0, 0.4); }
+.account-setting-inner .form-group .form-control {background: #FFFFFF; border-radius: 3.12758px; box-shadow: none; outline: none; padding: 15px 15px 15px 40px;border: none; font-weight: 400; font-size: 14.2736px; line-height: 13px; color: rgba(0, 0, 0, 0.4);height: 48px; }
+.account-setting-inner .form-group span {position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 100%; display: flex; align-items: center; justify-content: center; }
+.account-setting-inner select.form-control {background-image: url(../images/select-drop-icon.png) !important; background-repeat: no-repeat !important; background-position: 95% !important; }
+.account-setting-inner .form-group .form-control.date-form {background-image: url(../images/date-info-gree-icon.png) !important; background-repeat: no-repeat !important; background-position: 95% !important; }
+.btn.btn-profile {width: 100%; background: #2FB463; border-radius: 3.12758px; font-weight: 500; font-size: 18.7341px; line-height: 13px; padding: 15px 30px; color: #FFF; max-width: 362px; }
+.setting_tab_menu ul li .setting_tab_box .setting-tab-content .account-link a.active {color: rgba(252, 199, 6, 1); }
+.account-setting-inner {height: 100%; position: relative; width: 100%; }
+.account-setting-inner .changepassword-blog {height: 100%; position: relative; width: 100%; transition: 0.2s ease; }
+.changepassword-blog .change-password-header {padding: 40px 29px; background: #2FB463; top: 0; width: 100%; position: absolute; left: 0; right: 0; }
+.changepassword-blog .change-password-header strong {font-weight: 400; font-size: 18px; line-height: 22px; color: #FFFFFF; display: block; }
+.changepassword-blog .change-password-inner {height: calc(100vh - 111px); padding: 150px 120px 80px; overflow: auto; position: relative; z-index: 0; scrollbar-color: #C3EAD4 #C3EAD4; scrollbar-width: thin; -webkit-overflow-scrolling: touch; display: flex; align-items: center; justify-content: center; }
+.changepassword-blog .change-password-inner .change-password-form {max-width: 345px; width: 100%; }
+.changepassword-blog .change-password-inner .change-password-form h2 {text-align: center; font-size: 22px; line-height: 27px; color: #455A64; padding-bottom: 30px; margin: 0; font-weight: 600; }
+.account-setting-inner .form-group.number-input .form-control {padding-left: 115px; }
+.account-setting-inner .form-group.number-input .group {position: absolute; top: 0; bottom: 0; height: 100%;width:100px; display: flex;align-items: center;display: -webkit-flex;}
+.account-setting-inner .form-group.number-input .group .form-control {padding: 0 4px; height: 20px; border-right: 1px solid #DDD; line-height: 19px; font-size: 12px; border-radius: 0; background-size: 10px !important; background-position: 84% !important;}
+
+.account-setting-inner .form-group.number-input .group .con.form-control {background: transparent !important; }
+.setting_tab_menu ul li .setting_tab_box .setting-tab-content .account-link a {display: block; font-size: 14px; color: #FFF; padding: 10px 0; }
+.setting_tab_menu ul li .setting_tab_box .setting-tab-content .account-link{padding-top: 15px;}
+
+
+
 .setting_tab_menu ul li .setting_tab_box span {
     width: 30px;
     height: 30px;

@@ -41,32 +41,6 @@ const ChatContent = () => {
   function handleOnEnter(text) {
     console.log("enter", text);
   }
-  const download = (e) => {
-    console.log(e.target);
-    fetch(e.target, {
-      method: "GET",
-      headers: {},
-    })
-      .then((response) => {
-        response.arrayBuffer().then(function (buffer) {
-          const url = window.URL.createObjectURL(new Blob([buffer]));
-          const link = document.createElement("a");
-          link.href = url;
-          link.setAttribute("download", "image.png"); //or any other extension
-          document.body.appendChild(link);
-          link.click();
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
-  // useEffect(()=>{
-  //   socket.on("getLatestMessage",(newMessage)=>{
-  //     console.log("newmessage",newMessage)
-  //   })
-  // })
 
   const ShowProfile = () => {
     let getSettingId = document.getElementById("gtf_inner");
@@ -871,7 +845,6 @@ const ChatContent = () => {
                 // aria-label="Close"
                 value="download"
                 // download
-                onClick={(e) => download(e)}
               >
                 <img src={downloading} alt="img" />
               </button>

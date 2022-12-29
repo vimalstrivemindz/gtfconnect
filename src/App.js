@@ -16,6 +16,8 @@ import OtpVerification from "./pages/Auth/OtpVerification";
 import ProtectRoutes from "./pages/ProtectRoutes/ProtectRoutes";
 import EmailVerification from "./pages/Auth/EmailVerification";
 import { ToastContainer } from "react-toastify";
+import EditProfile from "./pages/editProfile";
+import ChangePassword from "./pages/changePassword";
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
           <Route path="/setting" element={<ProtectRoutes Cmp={Setting} />} />
           <Route path="/message" element={<ProtectRoutes Cmp={Message} />} />
           <Route path="/logout" element={<ProtectRoutes Cmp={LogOut} />} />
+          <Route path="/edit-profile" element={<ProtectRoutes Cmp={EditProfile} />} />
+          <Route path="/change-password" element={<ProtectRoutes Cmp={ChangePassword} />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/forget-password" element={<ForgetPassword />} />
