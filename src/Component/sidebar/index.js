@@ -17,11 +17,10 @@ const Sidebar = () => {
         {
           label: 'Yes',
           onClick: () => {
-
             const formData = new FormData();
             formData.append("IsLogging", true);
-            formData.append("logout", 0);
-            formData.append("is_gtf_connect", 1);
+            formData.append("logout", 1);
+            formData.append("is_gtf_connect", 0);
             try {
               baseUrlMain
                 .post("logout", formData, {

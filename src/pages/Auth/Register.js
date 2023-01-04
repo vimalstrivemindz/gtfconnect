@@ -145,9 +145,9 @@ const Register = () => {
       .required("Mobile number is Required"),
   });
   const SignupSchemaSecond = Yup.object().shape({
-    gstNumber: Yup.string().required("GST Number is Required"),
-    billingName: Yup.string().required("Billing Name is Required"),
-    additionalInfo: Yup.string().required("Additional Information is Required"),
+    // gstNumber: Yup.string().required("GST Number is Required"),
+    // billingName: Yup.string().required("Billing Name is Required"),
+    // additionalInfo: Yup.string().required("Additional Information is Required"),
     findUs: Yup.string().required("Choose field is Required"),
   });
   const SignupSchemaThird = Yup.object().shape({
@@ -339,11 +339,13 @@ const Register = () => {
                             <Field
                               type="date"
                               className="form-control"
+                              style={{paddingRight:"20px" }}
                               placeholder="DOB"
                               name="dob"
                               min="1940-01-01"
-                              max="2020-01-01"
+                              max="2018-01-01"
                             />
+                            
                             <span className="form-input-icon">
                               <img src={vector_icon6} alt="vector_icon6" />
                             </span>

@@ -28,15 +28,18 @@ const Login = () => {
   const navigate = useNavigate();
 
   const UserLogin = async (values) => {
+
+    const controller = new AbortController();
+    const signal = controller.signal;
     const formData = new FormData();
     formData.append("Email", values.Username);
     formData.append("Password", values.password);
     formData.append("IsLogging", true);
-    formData.append("logout", 0);
-    formData.append("is_gtf_connect", 1);
+    formData.append("logout", 1);
+    formData.append("is_gtf_connect", 0);
     try {
       await baseUrlAuth
-        .post("login", formData, {
+        .post("login", formData,{ signal: signal }, {
           headers: {
             "Content-Type": "application/json",
             DeviceToken: "test_token",
@@ -45,6 +48,7 @@ const Login = () => {
         })
         .then((response) => {
           if (response?.data?.status === 200) {
+            localStorage.setItem("UserID", response?.data?.data?.UserID);
             localStorage.setItem("email", values.Username);
             localStorage.setItem("token", response?.data?.data?.api_token);
             toast.success(response?.data?.message);
@@ -53,6 +57,8 @@ const Login = () => {
             toast.error(response?.data?.message);
           }
         });
+
+  
     } catch (error) {
       console.log("error :", error);
     }

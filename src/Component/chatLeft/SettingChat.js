@@ -110,7 +110,7 @@ const SettingChat = ({ title }) => {
                           <Link to="#">Account Setting</Link>
                         </strong>
                         <div className="account-link">
-                          <Link to="/edit-profile" className="active">
+                          <Link to="/edit-profile" >
                             Edit Profile
                           </Link>
                           <Link to="/change-password">Change Password</Link>
