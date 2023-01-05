@@ -34,11 +34,6 @@ const Test = () => {
   const [countryID, setCountryID] = useState();
   const [stateeID, setStateeID] = useState();
   const [cityID, setcityID] = useState();
-  console.log("countryID", countryID);
-  console.log("stateeID", stateeID);
-  console.log("stateName", getProfileDetails?.data?.StateName);
-  console.log("apis", getProfileDetails?.data?.states?.StateID);
-  console.log("countryApis", getProfileDetails?.data?.countrys?.CountryID);
   const navigate = useNavigate();
   const SignupSchemaEditProfile = Yup.object().shape({
     firstName: Yup.string().required("firstName is Required"),
@@ -205,7 +200,6 @@ const Test = () => {
        ?getProfileDetails?.data?.CityName
        : "";
 
-      console.log("daata",countrydatass)
 
   const initialValue = {
     firstName: getProfileDetails?.data?.Firstname,
@@ -499,10 +493,7 @@ const Test = () => {
                                       setStateeID(values?.stateName);
                                     }}
                                   >
-                                    {console.log(
-                                      "handleChange",
-                                      values?.stateName
-                                    )}
+                               
                                     {countryID === undefined ||
                                     countryID ===
                                       getProfileDetails?.data?.CountryName ? (
